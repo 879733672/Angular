@@ -1,0 +1,10 @@
+import foo from './foo.js';
+import { version } from '../package.json';
+import _ from 'lodash';
+console.log(version, _.defaults({ a: 1 }, { a: 2, b: 2 }));
+const a = 2;
+console.log(a);
+const Tool = function () {
+    console.log(foo);
+};
+export default Tool;
