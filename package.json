@@ -11,7 +11,7 @@
     "x": "npm --no-git-tag-version version major",
     "y": "npm --no-git-tag-version version minor",
     "z": "npm --no-git-tag-version version patch",
-    "postversion": "git add . && npm run commit && npm run git-cz && npm run changelog && npm run tag",
+    "postversion": "git add . && npm run commit && npm run changelog && npm run tag",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
