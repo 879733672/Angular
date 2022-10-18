@@ -21,6 +21,9 @@
         npm run start  // rollup开发模式
         npm run build  // 生产打包模式
 
+    3. 命令
+        npm run postversion  // 发布版本，打包tag，推送远程
+
 ### 发布包基本流程
 
 -   使用 nrm 管理 npm 源：

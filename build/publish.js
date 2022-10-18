@@ -23,7 +23,7 @@ program.parse(process.argv);
 console.log('newVersion:', newVersion);
 
 function publish () {
-    shelljs.sed('-i', '"name": "tool"', '"name":"@xc/tool"', targetFile);
+    shelljs.sed('-i', '"name": "tool"', '"name":"tool"', targetFile);
     shelljs.sed('-i', `version: "${VERSION}"`, `version: "${newVersion}"`, targetFile);
     shelljs.exec('npm run build');
     shelljs.exec('npm run publish');
