@@ -7,6 +7,7 @@
   "browser": "dist/index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
     "tag": "node ./build/version.js",
     "x": "npm --no-git-tag-version version major",
     "y": "npm --no-git-tag-version version minor",
@@ -25,7 +26,8 @@
     "format": "prettier --cache --write ./src",
     "commit": "git-cz",
     "lint": "eslint --ext .vue,.js,.jsx,.ts,.tsx ./src",
-    "lint:fix": "eslint --ext .vue,.js,.jsx,.ts,.tsx --fix ./src"
+    "lint:fix": "eslint --ext .vue,.js,.jsx,.ts,.tsx --fix ./src",
+    "lint-staged": "lint-staged"
   },
   "config": {
     "commitizen": {
@@ -39,8 +41,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,vue,md,json,ts,tsx}": [
-      "prettier --write ./src",
+    "*.{js,jsx,vue,md,ts,tsx}": [
+      "prettier --cache --write ./src",
       "eslint --ext .vue,.js,.jsx.ts,.tsx --fix ./src",
       "git add"
     ]

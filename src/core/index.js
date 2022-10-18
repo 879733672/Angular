@@ -35,4 +35,9 @@ const isPhone = (s) => {
 const isUrl = (s) => {
     return /^http[s]?:\/\/.*/.test(s);
 };
-export { isEmail, isMobile, isPhone, isUrl };
+
+const random = () => {
+    return Math.random().toString(32).slice(-6);
+};
+
+export { isEmail, isMobile, isPhone, isUrl, random };
