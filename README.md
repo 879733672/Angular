@@ -21,6 +21,9 @@
         npm run start  // rollup开发模式
         npm run build  // 生产打包模式
 
+    3. 命令
+        npm run postversion  // 发布版本，打包tag，推送远程
+
 ### 发布包基本流程
 
 -   使用 nrm 管理 npm 源：
@@ -49,3 +52,36 @@
     -   发布、更新：npm publish
 
     git commit --no-verify -m "xxx" // 某一次提交想要禁用 husky，可以添加参数--no-verify
+
+#### 目录结构
+tool
+├── CHANGELOG.md
+├── README.md
+├── build   // 打包配置文件
+│   ├── build.js
+│   ├── dev.js
+│   ├── easy.config.js
+│   ├── node.config.js
+│   ├── rollup.config.js
+│   └── version.js
+├── commitlint.config.js
+├── dir.md
+├── dist
+│   ├── index.js
+│   ├── index.js.map
+│   ├── index.min.js
+│   └── index.min.js.map
+├── es
+│   ├── index.js
+│   └── index.js.map
+├── lib
+│   ├── index.js
+│   └── index.js.map
+├── package-lock.json
+├── package.json
+└── src
+    ├── core
+    │   └── index.js
+    ├── foo.js
+    ├── index.html
+    └── index.js   // 打包入口文件
