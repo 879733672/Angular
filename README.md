@@ -22,7 +22,7 @@
         npm run build  // 生产打包模式
 
     3. 命令
-        npm run postversion  // 发布版本，打包tag，推送远程
+        npm run daily
 
 ### 发布包基本流程
 
@@ -54,6 +54,7 @@
     git commit --no-verify -m "xxx" // 某一次提交想要禁用 husky，可以添加参数--no-verify
 
 #### 目录结构
+```
 tool
 ├── CHANGELOG.md
 ├── README.md
@@ -85,3 +86,4 @@ tool
     ├── foo.js
     ├── index.html
     └── index.js   // 打包入口文件
+```
